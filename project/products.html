@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="bootstap.min.js"></script>
+<script src="jquery.js"></script>
+<style src="bootstap.min.css"></style>
+<style>
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  height:1000px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#navbar {
+
+  background-color: #f1f1f1;
+  padding: 70px 10px;
+  transition: 0.2s;
+  position: fixed;
+  width: 100%;
+
+  top: 0;
+  
+}
+
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 20px;
+  border-radius: 4px;
+
+}
+#bookingcontainer
+{
+  margin-right: 10%;margin-left: 10%; margin-top: 250px; height: 300px; background-color: #ddd; border-radius: 20px
+}
+#roomcontainer
+{
+  width:100%; border-radius: 20px; height:100%;
+}
+#navbar #logo {
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+#bookingcontainer:hover
+{
+margin-right: 0px;
+transform:scale(1.008);
+}
+#navbar a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar-right {
+  float: right;
+}
+
+@media screen and (max-width: 580px) {
+  #navbar {
+    padding: 80px 10px !important;
+  }
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  #navbar-right {
+    float: none;
+  }
+}
+</style>
+</head>
+<body >
+
+<div id="navbar">
+  <a href="#default" id="logo">CompanyLogo</a>
+  <div id="navbar-right">
+    <a href="#home">Contact US</a>
+    <a href="#contact">Sign Up</a>
+    <a href="#about">Login</a>
+  </div>
+  
+</div>
+<div class="filterdiv" style="width:10%; height:100%;border-radius: 20px;position: fixed; ">
+  <button class="filterbutton" style="width: 100%;height: 40px; border-radius: 10px;" value="Filter">
+     price filter
+  </button>
+<div class="filters" id="pricesort" onclick="location.href='menudupdup.html';" style="width:100%; text-align:center; cursor: pointer; padding-top:10px;height:40px;border-radius: 10px;position: relative; background-color: red;">
+  low to high
+</div>
+<div class="filters" style="width:100%; height:40px;border-radius: 10px;text-align:center;cursor: pointer;  padding-top:10px;position: relative; background-color: green;">
+  High to low
+</div>
+
+</div>
+<div id="bookingcontainer" style="margin-right: 10%;margin-left: 10%; margin-top: 250px; background-color: #ddd; border-radius: 20px">
+   <div id="roomcontainer" ng-repeat="x in products" >
+    <div id="mainpic" style="width:60%;height:100%; border-radius: 20px; float:left; background-image: url(image/3.jpg); background-repeat: no-repeat;background-size:cover;">
+   </div>
+   <div class ="bookingsection" style="float:left; width:40%; height:100%">
+    <div style="width:100%; height:30px; " class="bookinghead"> <h2 align="center" style="border-bottom: 1px solid black;"> Book your stay </h2></div>
+    <div style="hotelinfo" style="padding-left: 20px width:100%;height: 100%;">
+       <div class="hotelname" style="width:100%; height: 40px; font-size:200%; padding:5px 20px">
+        Hotel sitara-Grand
+       </div>
+       <div class="area" style=" width:100%; height: 40px; padding:10px 20px; font-size: 130%">
+        chowrasta , Hanamkonda
+       </div>
+       <div class="reviewholder" style="width:100%;height:40px;" >
+       <div class="rating" style="width:30px;width:60%;background-color:green; float: left; height: 40px; ">
+       </div>
+       <div class="reviewcount" style="width: 40%; height: 40px;  background-color:red; float:left;">
+   </div>
+ </div>
+          <div class="citycenter" style=" width:40%; height: 40px; padding:10px 0px;" value="2.3 km from city center ">
+        
+       </div>
+       <div class="percentageoff" style="width:20%; background-color: coral; margin: 10px 20px 10px 70%; height:40px"></div>
+       <div class="pricehoder" style=" background-color: black; height:40px;">
+                <div class="oldprice" style="width:20%;float: right; height: 100%; background-color: blue;">
+       </div>
+        <div class="oldprice" style="width:20%;float: right;height:100%; background-color:green;">
+       </div>
+ </div>
+</div>
+</div>
+</div>
+</div>
+  <div id="footer" style="height:400px; margin-top: 20px; ">
+  <div id="contactshare" style="width:100%; background-color: black; border-top:2px solid black;  margin-top:20px;">
+    <div class="app" style="width:33%; float:left; height: 200px; padding:20px 20px; ">
+        <p style="font-size: 18px; text-align: center;">Download the App
+</p>         <div style="height:120px; ">
+         </div >
+    </div>
+    <div id="contact" style="width:33%;float: left; height: 200px; margin-left: 0.5%; padding:20px 20px; ">
+         <p style="font-size: 18px; text-align: center;">contact Us</p>
+
+         <div style="height:120px;">
+           <h5 style="text-align: center; text-decoration-color:red; text-decoration:underline;"> Address </h5>
+           <p align="center"> Lovely professional University <br>phagwara <br> punjab <br> 14401</p>
+         </div >
+    </div>
+    <div id="about" style="width:33%; float:right; height: 200px; ;padding:20px 20px; ">
+         <p style="font-size: 18px; text-align: center;">About Us</p>
+         <div style="height:120px; ">
+          <p style="padding:0px 50px; float:left;"><a href="#">privacy policy</a></p> 
+          <p style="padding:0px 50px; float:right"><a href="#">privacy </a></p> 
+          <p style="padding:0px 50px; float:left; text-decoration: none;"><a href="#">support</a></p> 
+          <p style="padding:0px 50px; float:right"><a href="#">feedback </a></p> 
+         </div >
+  </div>
+  </div>
+  <div id="scrolltop" style="position: fixed; bottom:50px; right :50px; width:3%; height: 5%; background-color: red;"> </div>
+  </div>
+<script>
+  $(".filters").hide();
+  $(document).ready(function(){
+     $(".filterbutton").click(function(){
+      $('.filters').toggle(500);
+    });
+  });
+// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "30px 10px";
+    document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "70px 10px";
+    document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+</script>
+<script src="angularjs.js">
+  var app=angular.module("my",[]);
+appangular.module("my",[]).controller("cntrl",function($scope){
+       var products=[
+        "a",
+        "b",
+        "c",
+        ];
+        $scope.products=products;
+      });
+       
+</body>
+</html>
